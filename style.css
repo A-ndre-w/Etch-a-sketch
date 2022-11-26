@@ -13,3 +13,7 @@ main {
 .square:hover {
     background-color: yellow;   
 }
+
+.full {
+    background-color: yellow;
+}
