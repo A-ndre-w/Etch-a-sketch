@@ -1,29 +1,27 @@
-for (i=0;i<(256);i++) {
-    let div = document.createElement('div');
-    div.classList.add('square');
-    document.querySelector('main').appendChild(div);
-    div.addEventListener('mouseleave', () => {
-        div.classList.add('full');
-    });
-};
+let button = document.querySelector('.btn');
+let board = document.querySelector('.board');
 
-let button = document.querySelector('button');
 button.addEventListener('click', () => {
-    const elements = document.getElementsByClassName('square');
-    while(elements.length > 0){
-        elements[0].parentNode.removeChild(elements[0]);
-    };
+    cleanBoard();
     let squarenum = prompt('how many squares per row?');
     for (i=0;i<(squarenum*squarenum);i++) {
         let div = document.createElement('div');
         div.classList.add('square');
-        document.querySelector('main').appendChild(div);
+        document.querySelector('.board').appendChild(div);
         div.addEventListener('mouseleave', () => {
             div.classList.add('full');
         });
     };
-})
+    board.style.gridTemplateColumns = `repeat(${squarenum}, 1fr)`;
+    board.style.gridTemplateRows = `repeat(${squarenum}, 1fr)`;
+});
 
 
 
 
+function cleanBoard() {
+    const elements = document.getElementsByClassName('square');
+    while(elements.length > 0){
+        elements[0].parentNode.removeChild(elements[0]);
+    };
+};

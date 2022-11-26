@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 .header {
     margin: auto;
     margin-top: 30px;
@@ -11,19 +15,16 @@
     font-size: 20px;
 }
 
-main {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100vw;
-    height: auto;
+.board {
+    display: grid;
+    width: 500px;
+    height: 500px;
     margin: auto;
+    background-color: grey;
 }
 
 .square {
-    width: 6vw;
-    height: 6vw;
-    border: 1px solid white;
-    flex: auto;
+    background-color: blue;
 }
 
 .square:hover {
