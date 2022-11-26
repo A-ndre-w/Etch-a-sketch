@@ -1,3 +1,3 @@
 let div = document.createElement('div');
 div.classList.add('square');
-document.querySelectorAll('main').appendChild(div);
+document.querySelector('main').appendChild(div);
