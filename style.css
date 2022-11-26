@@ -1,0 +1,15 @@
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.square {
+    width: 6vw;
+    height: 6vw;
+    border: 1px solid white;
+    flex: auto;
+}
+
+.square:hover {
+    background-color: yellow;   
+}
