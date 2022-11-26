@@ -3,7 +3,10 @@ let board = document.querySelector('.board');
 
 button.addEventListener('click', () => {
     cleanBoard();
-    let squarenum = prompt('how many squares per row?');
+    createBoard(prompt('how many squares per row?'));
+});
+
+function createBoard(squarenum) {
     for (i=0;i<(squarenum*squarenum);i++) {
         let div = document.createElement('div');
         div.classList.add('square');
@@ -14,9 +17,7 @@ button.addEventListener('click', () => {
     };
     board.style.gridTemplateColumns = `repeat(${squarenum}, 1fr)`;
     board.style.gridTemplateRows = `repeat(${squarenum}, 1fr)`;
-});
-
-
+}
 
 
 function cleanBoard() {
@@ -25,3 +26,5 @@ function cleanBoard() {
         elements[0].parentNode.removeChild(elements[0]);
     };
 };
+
+createBoard(16);
